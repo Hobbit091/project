@@ -1,4 +1,4 @@
-.page-header{
+.page-header{ 
     position: fixed;
     top: 0;
     left:0;
@@ -13,11 +13,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color:rgba(222, 222, 222, 0.50);
-        @supports (backdrpop-filter: blur(10px)){
-            backdrpop-filter: blur (10px);
-            background-color:rgba(222, 222, 222, 0.50);
-        }
+        background-color:rgba(222, 222, 222, 0.98);
+        @supports (backdrop-filter: blur(20px)) {
+            .page-header {
+              background-color: rgba(222, 222, 222, 0.5);
+              backdrop-filter: blur(20px);
+            }
+          }
     }
 
     &__logo{
@@ -48,7 +50,9 @@
     }
 
     &__nav{
-        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        gap:60px;
     }
 
     &__container{

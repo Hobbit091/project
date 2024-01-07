@@ -6,14 +6,27 @@ body{
 }
 
 .body{
-    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: @gray;
+    background-image: url(../assets/images/noise.png),
+        url(../assets/images/bg.png);
+    background-position: 0 0, 0 0;
+    background-size: auto, 100%, auto;
+    background-repeat: repeat, repeat-y;
+    color: @black;
+    font-family: @font1;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.375;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    -webkit-text-size-adjust:100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     padding-top: 147px;
-    color: #1F1E1E;
 
 }
 
@@ -35,3 +48,52 @@ img{
     object-fit: cover;
 }
 
+input,
+textarea,
+button,
+select{
+    box-shadow: none;
+    outline: none;
+    color:@black;
+    font-family: font1;
+}
+
+button{
+    cursor: pointer;
+}
+
+input,
+textarea{
+    &::-webkit-input-placeholder{
+        color: #6c6c6c;
+    }
+    &::-moz-placeholder{
+        color: #6c6c6c;
+    }
+    &:-moz-placeholder{
+        color: #6c6c6c;
+    }
+    &:-ms-input-placeholder{
+        color: #6c6c6c;
+    }
+}
+
+input:focus,
+textarea:focus {
+    &::-webkit-input-placeholder{
+        color: transparent;
+    }
+    &::-moz-placeholder{
+        color: transparent;
+    }
+    &:-moz-placeholder{
+        color: transparent;
+    }
+    &:-ms-input-placeholder{
+        color: transparent;
+    }
+}
+
+textarea{
+    resize: none;
+}
