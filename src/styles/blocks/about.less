@@ -39,6 +39,12 @@
         }
         &--mb90{
             margin-bottom: 90px;
+
+            @media @bw1020{
+                display: flex;
+                justify-content: flex-start;
+                max-width: 310px;
+            }
         }
     }
     &__picture{
@@ -131,10 +137,31 @@
         &--wrapper{
             max-width: 344px;
             width: 100%;
+            
+            @media @bw1020{
+                display: flex;
+                flex-direction: row;
+                max-width: 930px;
+                justify-content: center;
+                gap: 300px;
+                margin-bottom: 10px;
+            }
 
+        }
+
+        @media @bw1020{
+            display: flex;
+            flex-direction: column;
         }
     }
     &__section-title{
         align-items: center;
+    }
+
+    &__link{
+        @media @bw1020{
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 }

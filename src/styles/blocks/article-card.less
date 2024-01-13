@@ -3,7 +3,13 @@
     display: flex;
     width: 100%;
     position: relative;
-    
+
+    @media @bw1020{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
     &:hover {
       .article-card__picture {
         box-shadow: 0 0 30px fade(@black, 55%);
@@ -44,6 +50,13 @@
           }
         }
       }
+
+      @media @bw1020{
+        max-width: 100%;
+        width: 100%;
+      }
+
+     
     }
     &__picture {
       display: block;
@@ -88,6 +101,10 @@
       &__title-link,
       &__description {
         max-width: 470px;
+
+        @media @bw1020{
+          max-width: 100%;
+        }
      }
       &__title-link {
         margin: auto 0 40px;
@@ -105,11 +122,21 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 33px;
+
+        @media @bw1020{
+          font-size: 30px;
+          line-height: 50px;
+        }
       }
       &__description {
         margin: 0;
         font-size: 16px;
         line-height: 22px;
+
+        @media @bw1020{
+          font-size: 24px;
+          line-height: 33px;
+        }
       }
       &__arrow {
         position: absolute;
