@@ -59,6 +59,13 @@
             width: 100%;
             padding-top: 66.322%;
         }
+
+        @media @bw768{
+            margin-top: -55px;
+            margin-bottom: 15px;
+            width: 80%;
+            align-self: center;
+        }
     }
 
     &__img{
@@ -76,8 +83,14 @@
         "picture1 picture1 picture2"
         "title title picture2"
         "text text text";
-        gap: 60px;
+        gap: 30px;
         grid-template-columns: 1fr 1fr 404px;    
+
+        @media @bw768{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
     &__picture2{
@@ -93,6 +106,15 @@
             display: block;
             width: 100%;
             padding-top: 122.029%;
+        }
+
+        @media @bw768{
+            align-self: normal;
+            margin-top: -55px;
+            margin-bottom: 35px;
+            width: 50%;
+            height: 15%;
+            align-self: flex-end;
         }
     }
     &__picture3{
@@ -127,6 +149,11 @@
         bottom: 0;
         width: calc(100%-58px);
         object-fit: contain;
+
+        @media @bw768{
+            width: 90%;
+            align-self: center;
+        }
     }
     &__block3{
         display: flex;
@@ -135,7 +162,7 @@
         gap: 60px;
 
         &--wrapper{
-            max-width: 344px;
+           // max-width: 344px;
             width: 100%;
             
             @media @bw1020{
@@ -145,6 +172,15 @@
                 justify-content: center;
                 gap: 300px;
                 margin-bottom: 10px;
+            }
+
+            @media @bw768{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 10px;
+                gap: 100px;
+                align-items: center;
             }
 
         }
