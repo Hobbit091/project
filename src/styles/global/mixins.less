@@ -21,12 +21,18 @@
     box-sizing: border-box;
     width: 100%;
     min-width: 624px;
+    @media @bw370{
+        min-width:280px;
+    }
+
     @media @bw1660{
         min-width: 604px;
     }
     @media @bw1340{
         max-width: 566px;
     }
+
+
 }
 
 .is-hidden{
