@@ -2,9 +2,16 @@
     &__link{
         display: flex;
         justify-content: flex-end;
+
+        @media @bw370{
+            font-size: 14px;
+        }
     }
     &__wrapper{
         padding-top: 128px;
+        @media @bw370{
+            padding-top: 20px;
+        }
     }
 
     &__slider{
@@ -12,6 +19,9 @@
         align-items: center;
         justify-content: center;
         gap:122px;
+        @media @bw370{  
+            gap:50px;
+        }
 
     }
     &__icon{
@@ -20,7 +30,4 @@
         }
     }
 
-
-  
- 
 }

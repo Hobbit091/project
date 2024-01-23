@@ -1,10 +1,27 @@
 .doit{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 0.2fr 1.8fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "text1 text2"
+    "text3 text3"; 
 
-    &__text{
+    @media @bw768{
+        grid-template-areas: 
+        "text1 text1"
+        "text2 text2"
+        "text3 text3";
+    }
+
+    @media @bw1020{
+        margin-top: 50px;
+    }
+
+    &__text1,&__text2,&__text3{
+        white-space: nowrap;
+        margin-left: 10%;
         color: @black;
         font-family: @font3;
         font-size: 100px;
@@ -13,12 +30,53 @@
         line-height: 50px; 
         display: flex;
         flex-wrap: nowrap;
+        grid-area: text1;
+
+
+        @media @bw370{
+            font-size: 33px;
+            line-height: 1px; 
+            margin-left: 5%;
+        }
+
+        @media @bw768{
+            font-size: 45px;
+            line-height: 1px; 
+            margin-left: 5%;
+        }
 
         @media @bw1020{
-            font-size: 90px;
-            line-height:5 px; 
-
-        
+            font-size: 55px;
+            line-height: 1px; 
+            margin-left: 5%;
         }
     }
+    &__text1 {
+        grid-area: text1; 
+
+        @media @bw768{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    &__text2 { 
+        grid-area: text2; 
+
+        @media @bw768{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__text3 {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: text3; 
+
+        @media @bw768{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    
+
 }

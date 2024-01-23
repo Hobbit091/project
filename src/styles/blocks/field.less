@@ -7,8 +7,18 @@
         font-size: 18px;
         line-height: 25px;
         color: @black;
+
         &--mb7 {
           margin-bottom: 7px;
+        }
+
+        @media @bw370{
+          display: flex;
+          justify-content: center;
+          max-width: 284px;
+          width: 100%;
+          text-align: center;
+          align-self: center;
         }
       }
       &__inputs{
@@ -36,6 +46,8 @@
       }
 
       &__input{
+        display: flex;
+
         &--w55{
             width: 55px;
     
@@ -53,6 +65,12 @@
             font-size: 16px;
             color: #6c6c6c; 
         }
+
+    }
+    &__input{
+      @media @bw370{
+        display: normal;
+      }
     }
 
     &__label{
@@ -67,6 +85,13 @@
             font-size: 18px;
             line-height: 25px;
             color: @black;
+        }
+    }
+    &__select{
+        @media @bw370{
+          display: flex;
+          max-width: 240px;
+          width: 100%;
         }
     }
 }

@@ -15,6 +15,11 @@
         background-color: @black_40;
         backdrop-filter: blur(25px);
     }
+    
+    @media @bw370{
+        padding: 80px 20px 20px;
+    }
+
     &__container{
         box-sizing: border-box;
         display:flex;
@@ -28,6 +33,13 @@
         background-repeat: repeat;
         background-position: 0 0;
         background-size: auto;
+
+        @media @bw370{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
     }
     &__title{
@@ -76,6 +88,5 @@
     &__form{
         margin: auto;
         max-width: 870px;
-
     }
 }
