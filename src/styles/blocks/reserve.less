@@ -6,6 +6,22 @@
     "checks scheme"
     "order legend"; 
     width: 100%;
+
+    @media @bw370{
+        grid-template-columns:100%;
+        grid-template-areas: 
+        "scheme"
+        "legend"
+        "checks"
+        "order";
+    }
+    @media @bw1020{
+        grid-template-columns: 233PX calc(89% - 233PX);
+        grid-template-areas: 
+    "scheme scheme"
+    "checks legend"
+    "checks order"; 
+    }
     
     &__checks {
         grid-area: checks;
@@ -15,12 +31,22 @@
     }
     &__order {
         grid-area: order;
+
+        @media @bw370{
+            width:100%;
+            align-self: center;
+            text-align: center;
+        }
     }
     &__scheme {
         grid-area: scheme;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media @bw1020{
+            align-items: center;
+        }
 
     }
     &__legend {
@@ -29,6 +55,11 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+
+        @media @bw370{
+            align-items: flex-start;
+        }
+     
     }
 
     &__section-title{
@@ -39,6 +70,14 @@
 
         &--mb30{
             margin-bottom: 30px;
+
+            @media @bw1020{
+                font-size: 16px;
+            }
+        }
+
+        @media @bw1020{
+            font-size: 16px;
         }
     }
 
@@ -54,6 +93,11 @@
         align-items: center;
         width: 100%;
         max-width: 780px;
+
+        @media @bw1020{
+            align-self: center;
+            justify-content: center;
+        }
     }
     &__scheme-title{
         margin: 0 0 40px;
@@ -63,6 +107,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+        text-align: center;
     }
     &__scheme-wrapper {
         position: relative;
@@ -115,12 +160,28 @@
           margin-left: 4px;
           font-size: 0.95em;
         }
+
+        @media @bw370{
+            font-size: 18px;
+        }
     }
 
     &__submit{
         text-align: center;
         width: 100%;
-        padding: 15px 131px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+
+        @media @bw370{
+            align-self: center;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        @media @bw768{
+            text-align: center;
+        }
     }
 
     &__price{
@@ -128,6 +189,11 @@
         flex-direction: column;
         align-items: flex-end;
         margin-bottom: 35px;
+
+        @media @bw370{
+            align-items: flex-start;
+            text-align: left;
+        }
     }
 
         
@@ -172,6 +238,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media @bw370{
+            align-items: flex-start;
+            text-align: left;
+        }
     }
 
     &__note{
@@ -216,6 +287,10 @@
                 border: 1px solid @black;
                 border-radius: 50%;
                 background-color: @gray_dark;
+            }
+
+            @media @bw370{
+                margin-left: 5px;
             }
         }
 

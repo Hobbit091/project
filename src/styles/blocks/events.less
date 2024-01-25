@@ -24,7 +24,22 @@
     }
 
     &__title{
+        display: flex;
+        justify-content: center;
         align-self: center;
+        font-size: 70px;
+
+        @media @bw370{
+            position:unset;
+            font-size: 20px;
+        }
+
+        @media @bw1340{
+            position:unset;
+            font-size: 40px;
+        }
+
+        
     }
 
     &__link{
