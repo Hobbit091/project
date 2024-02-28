@@ -1,0 +1,21 @@
+<main class="main">
+    <div class="home">
+      <header class="main-header home__main-header">
+        <h1 class="main-header__title">Арт-пространство</h1>
+        <picture class="main-header__picture">
+          <img src="assets/images/lenni.png" class="main-header__img" alt="lenni" />
+        </picture>
+        <p class="main-header__text">
+          для людей, горящих сердцем и делом
+          место для настоящего
+        </p>
+      </header>
+      @@include('offers.html')
+     <!--<section class="about home__about"></section>--> 
+      @@include('about.html', { class: 'home__about' })
+      @@include('upcoming.html', "class": "home__upcoming")
+      @@include('blog-listing.html', {"class": "home__listing"})
+      @@include('contacts.html', { class: 'home__contacts' })
+      @@include('doit.html')
+    </div>
+</main>
